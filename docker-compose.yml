@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  codeverity:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: codeverity-ai
+    working_dir: /app
+    command: python -m src.server
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      PYTHONPATH: /app
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONUNBUFFERED: "1"
+    stdin_open: true
+    tty: true
+
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: codeverity-tests
+    working_dir: /app
+    command: pytest -q
+    volumes:
+      - .:/app
+    environment:
+      PYTHONPATH: /app
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONUNBUFFERED: "1"
