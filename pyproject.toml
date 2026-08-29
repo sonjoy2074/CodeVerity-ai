@@ -1,0 +1,23 @@
+[project]
+name = "codeverity-ai"
+version = "0.1.0"
+description = "Evidence-driven multi-agent repository auditor and SRS compliance validator"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastmcp>=2.0.0",
+  "pydantic>=2.0.0",
+  "pytest>=8.0.0",
+  "semgrep>=1.0.0",
+  "bandit>=1.7.0",
+  "pyyaml>=6.0.0",
+  "httpx>=0.27.0",
+]
+
+[build-system]
+requires = ["hatchling>=1.18.0"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

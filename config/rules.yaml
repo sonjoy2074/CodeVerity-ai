@@ -1,0 +1,24 @@
+version: 1
+
+scoring:
+  security_weight: 0.30
+  quality_weight: 0.25
+  srs_weight: 0.25
+  verification_weight: 0.20
+
+thresholds:
+  critical_vulns: 0
+  high_vulns: 2
+  medium_vulns: 5
+  low_vulns: 10
+  max_findings_per_file: 20
+  min_srs_coverage: 0.70
+
+quality:
+  cyclomatic_complexity_limit: 15
+  function_length_limit: 40
+  maintainability_target: 0.8
+
+compliance:
+  requirement_weight: 1.0
+  partial_credit_ratio: 0.5

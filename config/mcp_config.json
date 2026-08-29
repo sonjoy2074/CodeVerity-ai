@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "codeverity-ai": {
+      "command": "python",
+      "args": ["-m", "src.server"],
+      "cwd": ".",
+      "env": {
+        "PYTHONPATH": "."
+      }
+    }
+  }
+}
