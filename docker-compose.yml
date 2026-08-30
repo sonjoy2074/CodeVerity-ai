@@ -25,7 +25,7 @@ services:
       dockerfile: Dockerfile
     container_name: codeverity-tests
     working_dir: /app
-    command: pytest -q
+    command: python -m pytest
     volumes:
       - .:/app
     environment:
