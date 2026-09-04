@@ -7,7 +7,8 @@ services:
       dockerfile: Dockerfile
     container_name: codeverity-ai
     working_dir: /app
-    command: python -m src.server
+    # command: python -m src.server
+    command: python -m src.main
     ports:
       - "8000:8000"
     volumes:

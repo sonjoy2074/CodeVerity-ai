@@ -1,2 +1,6 @@
 fastmcp
 pydantic
+fastapi
+uvicorn[standard]
+pytest
+httpx
